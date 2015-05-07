@@ -9,6 +9,8 @@ class UsersTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
+		\DB::disableQueryLog();
+		
 		\DB::table('users')->delete();
         
 		\DB::table('users')->insert(array (
