@@ -9,9 +9,13 @@ $(document).ready(function(){
             data    : { username : $('#username').val() },
             dataType: 'json',
             success : function(data){
+
+                if (data.length == undefined) {
+                    $('#username-suggest').html('<p class="alert alert-danger">'+data.message+'</p>');
+                    return false;
+                };
+
                 var resp = '<p>Suggested username:</p><ul class="alert alert-success">';
-                
-                console.log(data.length);
 
                 if (data.length > 0) {
                     
@@ -22,6 +26,11 @@ $(document).ready(function(){
 
                     $('#username-suggest').html(resp);
                 }
+            },
+            error : function(data)
+            {
+                var obj = jQuery.parseJSON(data);
+                $('#username-suggest').html('<p class="alert alert-danger">'+obj.message+'</p>');
             }
         });
 

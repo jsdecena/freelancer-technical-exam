@@ -50,7 +50,7 @@ class FrontController extends BaseController {
 			}
 
 		}else{
-			return Redirect::route('home')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
+			return Response::json(array('message' => 'Email must be in the correct format. (eg. you@email.com)'));
 		}		
 	}
 }

@@ -20,7 +20,8 @@
 			<div class="row">
 				{{ Form::open(array('url' => URL::route('check'), 'class' => 'navbar-form navbar-left' )) }}
 					<div class="form-group">
-						<input type="text" class="form-control" name="username" id="username" placeholder="Username">
+						<label for="username">Input your email</label>
+						<input type="text" class="form-control" name="username" id="username" placeholder="Email">
 					</div>
 					<button type="submit" class="btn btn-default" name="submit" id="submit">Submit</button>
 				{{ Form::close() }}
