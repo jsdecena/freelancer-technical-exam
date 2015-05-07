@@ -12,7 +12,7 @@
 - Run `php artisan serve`
 - Goto http://localhost:8000
 
-#####Note: This is not anymore the actual project I passed in freelancer.com. I have reviewed my past work and even if it does the job, it is not an optimized work. This should be straightforward.
+#####Note: This is not anymore the actual project I passed in freelancer.com. I have reviewed my past work and even if it does the job, it was not an optimized work. This version should be straightforward.
 
 ####Specification: 
 
